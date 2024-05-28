@@ -1,0 +1,40 @@
+from .setting import *
+
+class Button:
+    def __int__(self, x, y, width, height, color, text=None, text_color=BLACK)
+    self.x = x
+    self.y = y
+    self.width = width
+    self.height = height
+    self.color = color
+    self.text = text
+    self.text_color = text_color
+    
+#
+def draw(self,win):
+    # below line creates the filled in color of the rectangle (pixel)
+    pygame.draw.rect(win, self.color, (self.x, self,y, self,width, self,height))
+    # adding the value (2) tells the program to only create the outline and remove filled
+    pygame.draw.rect(win, BLACK, (self.x, self,y, self,width, self,height), 2)
+
+    if self.text:
+        # the 22 is the font size - can be adjusted
+        button_font = get_font(22)
+        text_surface = button_font.render(self.text, 1, self.text_color)
+        # to place the color onto the button
+        # the below line will find top left of the text and find the area of the surface
+        win.blit(text_surface, (self.x + self.width/2 - text_surface.get_width()/2, self.y + self.height/2 - text_surface.get_height()/2))
+        
+
+
+# This function will tell me if the user has clicked a specific button
+def clicked(self, pos):
+    x,y = pos
+    # this will check if the x position of the rectangle (button) is 
+    # within the x-button. boundaries of the button
+    if not (x >= self.x and x <= self.x + self.width):
+        return False
+    if not (y >= self.y and y <= self.x + self.height):
+        return False
+    
+    return True
