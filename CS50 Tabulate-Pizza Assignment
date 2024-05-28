@@ -1,0 +1,10 @@
+import tabulate 
+from tabulate import tabulate, tabulate_formats
+import sys
+import Dict
+
+with open('test_csv.csv') as f:
+    reader = csv.reader(f)
+    headers = []
+    display_data = tabulate(reader)
+    print(display_data)
