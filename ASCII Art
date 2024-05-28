@@ -1,0 +1,5 @@
+from pyfiglet import figlet
+
+prompt = input("Input: ")
+conversion = figlet.setFont(font=f)
+print("Output: " + figlet.renderText(prompt))
