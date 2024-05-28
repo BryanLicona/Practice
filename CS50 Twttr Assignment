@@ -1,0 +1,7 @@
+Statement = input("Input: ")
+letters = ["a", "e", "i", "o", "u"]
+output = print("Output: ", end="")
+
+for c in Statement:
+    if c.lower() not in letters:
+        print(c, end="")
