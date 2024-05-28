@@ -1,0 +1,40 @@
+# Prompt user for a date - anno Domini (month-day-year)
+# Formatted 9/8/1936 or September 8, 1936
+# Month in the latter might be values in the list below:
+# Output same date YYYY-MM-DD
+# if user's input not a valid date in format, prompt user again
+# Assume every month has no more than 31 days (No need to validate months with 28, 29, 30, 31 days)
+
+months: [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+]
+
+while True:
+    date = input("Date: ")
+    if "/" in date:
+        month, day, year = date.split("/")
+    elif "," in date:
+        date = date.replace(",", "")
+        month, day, year = date.split(" ")
+        if month in month:
+            month = month.index(month) + 1
+    try:
+        if int(month) > 12 or int(day) > 31:
+            continue
+        else:
+            break
+    except ValueError:
+        continue
+    
+print(year + "-" + f"{int(month):02}" + "-" + f"{int(day):02}")   
