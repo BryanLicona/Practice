@@ -1,0 +1,18 @@
+# Creating the function
+def sum(mydict):
+    # Beginning sum
+    sum = 0
+    # Iterate through values
+    for i in mydict.values():
+        sum = sum + i
+    return sum
+
+# initializing function (Adding Dictionary)
+
+mydict = {"x": 3.00, "y": 5.00, "z": 10.00}
+
+print("Dictionary: ", mydict)
+
+# printing the sum
+
+print("sum: ", sum(mydict))
