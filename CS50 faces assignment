@@ -1,0 +1,13 @@
+# Implement a program that prompts user for a str in English
+# Output the "emoji" version of that str
+# converting any codes (or aliases) to their corresponding emoji
+import emoji
+from emoji import emojize
+
+prompt = input("Input: ")
+smiley = emoji.emojize(prompt)
+conversion = emoji.emojize(prompt, "alias" == True)
+if smiley != prompt:
+    print("Output: ",smiley)
+else:
+    print("Output: ",conversion)
