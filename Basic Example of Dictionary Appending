@@ -1,0 +1,12 @@
+def main():
+    grocery = []
+    while True:
+        try:
+            item = input().upper()
+            grocery.append(item)
+        except EOFError:
+            for item in sorted(set(grocery)):
+                print(grocery.count(item), item)
+            break
+        
+main()
