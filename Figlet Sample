@@ -1,0 +1,19 @@
+
+#figlet = Figlet()
+
+# You can set the font with code like this, wherein 'f' is the font's name as a str:
+
+
+# And you can output text in that font with code like this, wherein 's' is that text as a str:
+
+#print(figlet.renderText(s))
+
+# Note that the random module comes with quite a few functions - useable
+
+#import pyfiglet
+#prompt = input("Input: ")
+#result = pyfiglet.figlet_format(prompt)
+#print(result)
+
+import pyfiglet
+print(pyfiglet.FigletFont.getFonts())
