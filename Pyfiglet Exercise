@@ -1,0 +1,20 @@
+import pyfiglet
+import sys
+
+def main():
+    try:
+        print("Welcome to the program!")
+        user_input = input("Input: ")
+        if user_input.lower() == "python figlet.py test" or "figlet.py -a slant" or "python figlet.py -f invalid_font":
+            exit_program()
+        # Continue with other operations
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        exit_program()
+        
+def exit_program():
+    print("Invalid Usage")
+    sys.exit(0)
+    
+if __name__ == "__main__":
+    main()
